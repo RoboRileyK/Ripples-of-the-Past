@@ -306,7 +306,7 @@ public class TimeHandler {
         float ticks = (float) (standPower.getExp() - minStandExp) / (float) (IStandPower.MAX_EXP - minStandExp) * 95F + 30;
         ticks *= otherPower.map(power -> {
            if (power.getType() == ModNonStandPowers.VAMPIRISM.get()) {
-               return 1F + (float) ((VampirismPowerType.bloodLevel(power, Difficulty.EASY) - 1) * 4) / 15F;
+               return 1F + (float) ((VampirismPowerType.bloodLevel(power, Difficulty.EASY) - 1) * 15) / 15F;
            }
            return 1F;
         }).orElse(1F);
